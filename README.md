@@ -25,6 +25,7 @@ analogRead()로 0~4095 값을 읽고, map(potValue, 700, 4095, 0, 180)으로
 map(potValue, 700, 4095, ...)에서 700은 제가 가지고 있는 가변저항의 하한 값이 700 부근이며
 원래의 값은 0 입니다
 
+============================================================================================
 
 ESP32 Servo Motor Control with a Potentiometer
 
@@ -32,22 +33,22 @@ In this video, we control the rotation angle of a servo motor using an ESP32 and
 As you turn the potentiometer, the ESP32's ADC reads the value, maps it to a 0–180° range,
 and the servo follows the knob in real time.
 
-<Parts>
+**Parts
 - ESP32-WROOM (30-pin)
 - SG90 / MG90 servo motor
 - Potentiometer
 - Jumper wires
 
-<Wiring>
+**Wiring
 - Servo signal → GPIO27
 - Potentiometer signal (SIG) → GPIO4 (ADC)
 - Servo VCC / Potentiometer VCC → VIN (5V)
 - All GND → common GND
 
-<Library>
+**Library
 - ESP32Servo (includes ESP32PWM)
 
-<Key Code>
+**Key Code
 Read the analog value (0–4095) with analogRead(), convert it to an angle using
 map(potValue, 700, 4095, 0, 180), and drive the servo with myServo.write().
 ** 700 : My potentiometer has minimum value of 700, otherwise this value should 0(zero).
